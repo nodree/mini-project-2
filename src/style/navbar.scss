@@ -1,58 +1,79 @@
-.Navbar{
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
+.Navbar {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // background: linear-gradient(
+  //   to bottom,
+  //   rgba(31, 31, 31, 1) 0%,
+  //   rgba(48, 48, 48, 1) 100%
+  // );
+  position: fixed;
+  max-height: 5rem;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  padding: 0px;
+  // box-shadow: 2px 8px 7px 0px rgba(97, 95, 97, 0.41);
+  &__Logo {
+    img {
+      display: block;
+      max-height: 6em;
+    }
+  }
+  &__Search {
     align-items: center;
-    background: linear-gradient(to bottom, rgba(31,31,31,1) 0%, rgba(48,48,48,1) 100%);
-    max-height: 5rem;
-    padding: 0px;
-    box-shadow: 2px 8px 7px 0px rgba(97,95,97,0.41);
-    &__Logo{
-        img{
-        display: block;
-        max-height: 6em;
-        }
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    pointer-events: none;
+
+    form {
+      margin-left: -100px;
+      input {
+        text-align: center;
+        font-weight: 300;
+        font-size: 14px;
+        height: 37px;
+        width: 80%;
+        background: rgba(0, 0, 0, 0.61);
+        appearance: none;
+        border: 0;
+        border: 2px solid rgba(gray, 0.1);
+        outline: none;
+        border-radius: 37px;
+        padding: 0 10px;
+        pointer-events: all;
+        transition: border 0.25s ease, width 0.125s ease 0.125s;
+      }
+      input:focus {
+        border: 2px solid gray;
+        width: 130%;
+        background-color: grayscale($color: #00000069);
+      }
     }
-    &__Search{
-        font-size: 30px;
-        form{
-            margin-left: -100px;
-            input{
-                padding:0px;
-                text-align: center;
-                width: 500px;
-                height: 35px;
-                box-sizing: border-box;
-                background-color: transparent;
-                border:none;
-                color: white;
-                }
-                input:focus{
-                    background-color:grayscale($color: #00000069);
-                }
-        }
-    &__Login{
-        
+    &__Login {
     }
-    }
+  }
 }
 
-.RightMenu{
-    font-size: 30px;
+.RightMenu {
+  font-size: 30px;
 
-    &__SignIn{
-        box-sizing: border-box;
-        margin-top: -15px;
-        margin-right: 20px;
-        button{
-            color:rgb(189, 189, 189);
-            font-size: 15px;
-            background-color: transparent;
-            border:none;
-        }
-        button:hover{
-            color:white;
-            border-bottom:solid 2px blue;
-        }
+  &__SignIn {
+    box-sizing: border-box;
+    margin-top: -15px;
+    margin-right: 20px;
+    button {
+      color: rgb(189, 189, 189);
+      font-size: 15px;
+      background-color: transparent;
+      border: none;
     }
+    button:hover {
+      color: white;
+      border-bottom: solid 2px blue;
+    }
+  }
 }

@@ -1,22 +1,17 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import Navbar from './components/navbar/navbar'
-import Footer from './components/footer'
-import Slider from './components/slideshowComponent/SlideShow';
-
+import React, { Component } from "react";
+import Home from "./containers/Home";
+import { BrowserRouter, Route } from "react-router-dom";
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar />
-        <Slider />
-        <Footer />
+        <BrowserRouter>
+          <Route path="/" exact component={Home} />
+        </BrowserRouter>
       </div>
-    )
+    );
   }
 }
 // const mapStateToProps = (state, ownProps)
 
-export default connect()(App);
-
-
+export default App;
