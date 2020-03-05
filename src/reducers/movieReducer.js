@@ -1,8 +1,8 @@
-import { GET_MOVIES_SUCCESS } from "../actions/";
+import { GET_MOVIE } from "../actions/";
 
 export default (state = [], action) => {
   switch (action.type) {
-    case GET_MOVIES_SUCCESS:
+    case GET_MOVIE:
       return { ...state, items: action.payload };
 
     default:

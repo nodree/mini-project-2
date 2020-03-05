@@ -5,7 +5,7 @@
   height: 450px;
   overflow: hidden;
   white-space: nowrap;
-  box-shadow: 2px 8px 7px 0px rgba(97, 95, 97, 0.41);
+  /* box-shadow: 2px 8px 7px 0px rgba(97, 95, 97, 0.41); */
 }
 
 .slider-wrapper {

@@ -1,0 +1,63 @@
+.Footer {
+  width: 100%;
+  position: absolute;
+  background-color: black;
+  transform: translate(0, -10px);
+  justify-content: space-between;
+  display: flex;
+  height: 150px;
+  flex-direction: row;
+  &__Grid {
+    margin-top: 0px;
+    &__Left {
+      display: flex;
+      margin-left: 230px;
+      img {
+        size: 50vh;
+        max-height: 10em;
+      }
+      p {
+        margin-top: 35px;
+        font-weight: 350;
+        text-align: left;
+        width: 20vw;
+        color: white;
+      }
+    }
+    &__Center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 200px;
+
+      p {
+        font-weight: 300;
+        text-align: left;
+        margin: 0px;
+        color: white;
+      }
+    }
+    &__Right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-right: 250px;
+      width: 300px;
+      h2 {
+        font-weight: 300;
+        text-align: right;
+        margin: 0px;
+        color: white;
+      }
+      &__Logo {
+      }
+
+      p {
+        font-weight: 300;
+        text-align: right;
+        margin: 0px;
+        color: white;
+      }
+    }
+  }
+}

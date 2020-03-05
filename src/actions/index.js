@@ -1,7 +1,7 @@
 import axios from "axios";
 // import { GET_LIST, GET_DETAIL } from "./types";
 const baseUrl = "http://notflixtv.herokuapp.com/api/v1/movies";
-
+const page = 1;
 // export const getMovieList = () => async dispatch => {
 //   try {
 //     const res = await fetch(`${baseUrl}/?page=1&limit=10`);
@@ -73,6 +73,7 @@ const baseUrl = "http://notflixtv.herokuapp.com/api/v1/movies";
 // };
 
 export const GET_MOVIES_SUCCESS = "GET_MOVIES_SUCCESS";
+export const GET_MOVIE = "GET_MOVIE";
 
 // export const fetchMoviesSuccess = movies => ({
 //   type: GET_MOVIES_SUCCESS,
@@ -90,10 +91,19 @@ export const GET_MOVIES_SUCCESS = "GET_MOVIES_SUCCESS";
 // }
 
 export const getMovieList = () => async dispatch => {
-  const response = await axios.get(`${baseUrl}?page=1&limit=20`);
-  console.log(response);
+  const response = await axios.get(`${baseUrl}?page=${page}&limit=20`);
+  console.log("movies", response);
   dispatch({
     type: GET_MOVIES_SUCCESS,
+    payload: response.data.data.docs // << api parent child
+  });
+};
+
+export const getMovie = () => async dispatch => {
+  const response = await axios.get(`${baseUrl}/5e60017db632290017bbcd45`);
+  console.log("movie", response);
+  dispatch({
+    type: GET_MOVIE,
     payload: response.data.data.docs // << api parent child
   });
 };

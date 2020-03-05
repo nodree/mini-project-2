@@ -26,6 +26,7 @@ class Slider extends Component {
 
     this.state = {
       images: [
+        "https://image.tmdb.org/t/p/original/AuGiPiGMYMkSosOJ3BQjDEAiwtO.jpg",
         "https://image.tmdb.org/t/p/original/xq1Ugd62d23K2knRUx6xxuALTZB.jpg",
         "https://image.tmdb.org/t/p/original/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
         "https://image.tmdb.org/t/p/original/9cJETuLMc6R0bTWRA5i7ctY9bxk.jpg",
